@@ -16,7 +16,7 @@ public class VoivodshipMapperTest {
         List<String> rawData = TestDataProvider.rawData;
 
         // when
-        Map<Integer, String> results = VoivodshipMapper.mapData(rawData);
+        Map<Integer, String> results = VoivodeshipMapper.mapData(rawData);
 
         // then
         assertEquals(2, results.size());

@@ -22,7 +22,7 @@ public class LocationMapper {
     private static Location mapRow(String line, Map<Integer,String> voivodeships){
 
         String[] splitLine = line.split(";");
-        String type = splitLine[5];
+        String type = splitLine[5].split(",")[0]; // zabezpieczenie, gdy po nazwie są dodatkowe dane (np. miasto stołeczne Warszawa)
         String name = splitLine[4];
         Integer voiNumber = Integer.valueOf(splitLine[0]);
         String voivodeshipName = voivodeships.get(voiNumber);

@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class VoivodshipMapper {
+public class VoivodeshipMapper {
     public static Map<Integer, String> mapData(List<String> loadedRawData) {
 
         Map<Integer, String> voivodeshipMap = new HashMap<>();

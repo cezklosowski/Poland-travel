@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataLoader {
-    public static List<String> loadFiler(String path){
+    public static List<String> loadFile(String path){
 
         List<String> loadedRows = new ArrayList<>();
 
