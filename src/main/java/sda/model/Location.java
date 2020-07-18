@@ -27,10 +27,6 @@ public abstract class Location {
 
     @Override
     public String toString() {
-        return "Location{" +
-                "name='" + name + '\'' +
-                ", voivodeship='" + voivodeship + '\'' +
-                ", type=" + type +
-                '}';
+        return sayGreeting() + "\n" +  name + ' ' + voivodeship + ' ' + type + "\n";
     }
 }

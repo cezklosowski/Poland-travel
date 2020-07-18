@@ -11,6 +11,7 @@ public class App {
         Map<Integer, String> voivodeships = VoivodeshipMapper.mapData(loadedRows);
         List<Location> locations = LocationMapper.mapLocations(loadedRows, voivodeships);
         Location randomLocation = VacationTargetGenerator.getRandomLocation(locations);
+        System.out.println(LocationAnalyzer.getLongestNameLocations(locations));
         FileGenerator.generate(randomLocation, "test.txt");
 
     }
