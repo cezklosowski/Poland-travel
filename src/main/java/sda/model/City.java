@@ -1,4 +1,4 @@
-package model;
+package sda.model;
 
 public class City extends Location {
 

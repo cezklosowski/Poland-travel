@@ -1,4 +1,4 @@
-package model;
+package sda.model;
 
 public abstract class Location {
     private String name;
