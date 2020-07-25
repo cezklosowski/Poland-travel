@@ -7,6 +7,7 @@ import sda.model.Village;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static org.junit.Assert.*;
@@ -40,6 +41,19 @@ public class LocationAnalyzerTest {
                 .collect(Collectors.toList());
         assertTrue(resultNames.contains("Kipc Dolny"));
 
+    }
+
+    @Test
+    public void testByVoivodeshipFiltering(){
+
+        Map<String, List<Location>> result = LocationAnalyzer.getLongestNameLocationsByVoivodeships(testLocations);
+        assertEquals(2,result.keySet().size());
+
+        List<Location> warszawskieVoi = result.get("WARSZAWSKIE");
+        assertEquals(1,warszawskieVoi.size());
+
+
 
     }
+
 }
