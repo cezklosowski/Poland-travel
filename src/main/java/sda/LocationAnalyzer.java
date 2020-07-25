@@ -2,7 +2,9 @@ package sda;
 
 import sda.model.Location;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.OptionalInt;
 import java.util.stream.Collectors;
 
@@ -15,6 +17,15 @@ public class LocationAnalyzer {
         return locations.stream()
                 .filter(loc -> loc.getName().length() == maxNameLength).collect(Collectors.toList());
 
+    }
+
+    public static Map<String,List<Location>> getLongestNameLocationsByVoivodeships(List<Location> locations){
+        Map<String,List<Location>> longestNamesByVoivodeships = new HashMap<>();
+        locations.stream()
+                .collect(Collectors.groupingBy(location -> location.getVoivodeship())).forEach((key, value) -> {
+                    longestNamesByVoivodeships.put(key,getLongestNameLocations(value));
+        });
+        return longestNamesByVoivodeships;
     }
 
 }
